@@ -1,4 +1,18 @@
-alice_in_wonderland = '"Would you tell me, please, which way I ought to go from here?"\n"That depends a good deal on where you want to get to," said the Cat.\n"I don't much care where ——" said Alice.\n"Then it doesn't matter which way you go," said the Cat.\n"—— so long as I get somewhere," Alice added as an explanation.\n"Oh, you're sure to do that," said the Cat, "if you only walk long enough."'
+alice_in_wonderland = (
+    '"Would you tell me, please, which way I ought to go from here?"\n'
+    '"That depends a good deal on where you want to get to," said the Cat.\n'
+    '"I don\'t much care where ——" said Alice.\n'
+    '"Then it doesn\'t matter which way you go," said the Cat.\n'
+    '"—— so long as I get somewhere," Alice added as an explanation.\n'
+    '"Oh, you\'re sure to do that," said the Cat, "if you only walk long enough."'
+)
+
+for char in alice_in_wonderland:
+    if char == "'":
+        print(char)
+
+print(alice_in_wonderland)
+
 # task 01 == Розділіть змінну alice_in_wonderland так, щоб вона займала декілька фізичних лінії
 # task 02 == Знайдіть та відобразіть всі символи одинарної лапки (') у тексті
 # task 03 == Виведіть змінну alice_in_wonderland на друк
@@ -10,6 +24,7 @@ alice_in_wonderland = '"Would you tell me, please, which way I ought to go from 
     # на мову пітон і виведіть відповідь, так, щоб було
     # зрозуміло дитині, що навчається в п'ятому класі
 """
+
 # task 04
 """
 Площа Чорного моря становить 436 402 км2, а площа Азовського
@@ -17,6 +32,10 @@ alice_in_wonderland = '"Would you tell me, please, which way I ought to go from 
 ське моря разом?
 """
 
+black_sea = 436402
+azov_sea = 37800
+sea_sum = black_sea + azov_sea
+print("Сума площ Чорного і Азовського морів: ", sea_sum, "км2")
 
 # task 05
 """
@@ -25,7 +44,14 @@ alice_in_wonderland = '"Would you tell me, please, which way I ought to go from 
 250 449 товарів. На другому та третьому – 222 950 товарів.
 Знайдіть кількість товарів, що розміщені на кожному складі.
 """
+overall_goods = 375291
+first_and_second_warehouses = 250449
+second_and_third_warehouses = 222950
+warehouse_3 = overall_goods - first_and_second_warehouses
+warehouse_2 = second_and_third_warehouses - warehouse_3
+warehouse_1 = first_and_second_warehouses - warehouse_2
 
+print("Перший склад: ", warehouse_1, "\nДругий склад: ", warehouse_2, "\nТретій склад: ", warehouse_3)
 
 # task 06
 """
@@ -35,6 +61,10 @@ alice_in_wonderland = '"Would you tell me, please, which way I ought to go from 
 вартість комп’ютера.
 """
 
+payment_period = 18
+payment_per_month = 1179
+computer_price = payment_period * payment_per_month
+print(f"Вартість компьютера становить {computer_price} грн")
 
 # task 07
 """
@@ -43,6 +73,16 @@ a) 8019 : 8     d) 7248 : 6
 b) 9907 : 9     e) 7128 : 5
 c) 2789 : 5     f) 19224 : 9
 """
+
+a = 8019 % 8
+b = 9907 % 9
+c = 2789 % 5
+d = 7248 % 6
+e = 7128 % 5
+f = 19224 % 9
+
+print(f"остача від а = {a}, остача від b = {b}, остача від c = {c}, остача від d = {d}, остача від e = {e},"
+      f"остача від f = {f}")
 
 
 # task 08
@@ -57,7 +97,8 @@ c) 2789 : 5     f) 19224 : 9
 Торт            1           350 грн
 Вода            3           21 грн
 """
-
+birthday_price = (4*274) + (2*218) + (4*35) + 350 + (3*21)
+print(birthday_price)
 
 # task 09
 """
@@ -67,6 +108,8 @@ c) 2789 : 5     f) 19224 : 9
 Ігорю, щоб вклеїти всі фото?
 """
 
+pages_needed = 232/8
+print(pages_needed)
 
 # task 10
 """
@@ -79,3 +122,13 @@ c) 2789 : 5     f) 19224 : 9
 равку під час цієї подорожі, кожного разу заправляючи пов-
 ний бак?
 """
+
+distance = 1600
+fuel_consumption_per_100km = 9
+fuel_tank = 48
+
+fuel_for_trip = 1600/100*9
+print("Потрібно палива на всю поїздку: ", fuel_for_trip)
+
+pit_stops = fuel_for_trip/fuel_tank
+print("Кількість зупинок на заправці: ", pit_stops)
